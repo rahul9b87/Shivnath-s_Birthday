@@ -1,0 +1,108 @@
+body {
+    background: linear-gradient(120deg, #1a1a1a, #333);
+    color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.glowing-text {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 0 5px #ff00cc, 0 0 10px #ff00cc, 0 0 20px #ff00cc, 0 0 40px #ff00cc;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #ff00cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-img.active {
+    opacity: 1;
+}
+
+#surpriseButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    background-color: #ff00cc;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ff00cc;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#surpriseButton:hover {
+    background-color: #cc0099;
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.surprise {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #ff00cc;
+    animation: reveal 1s ease-in-out;
+}
+
+@keyframes reveal {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+#nextSurpriseButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0099ff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #0099ff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#nextSurpriseButton:hover {
+    background-color: #007acc;
+    transform: scale(1.1);
+}

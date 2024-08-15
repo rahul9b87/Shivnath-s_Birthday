@@ -1,0 +1,60 @@
+body {
+    background: linear-gradient(45deg, #1a1a1a, #6600cc);
+    color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    animation: bgAnimation 10s infinite alternate;
+}
+
+@keyframes bgAnimation {
+    0% { background: linear-gradient(45deg, #1a1a1a, #6600cc); }
+    100% { background: linear-gradient(45deg, #ff0066, #6600cc); }
+}
+
+.container {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.glowing-text {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 0 5px #ff00cc, 0 0 10px #ff00cc, 0 0 20px #ff00cc, 0 0 40px #ff00cc;
+    margin-bottom: 20px;
+}
+
+.message {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #ff00cc;
+    animation: reveal 1s ease-in-out;
+}
+
+@keyframes reveal {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+#backButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #1a1a1a;
+    background-color: #ff00cc;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ff00cc;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#backButton:hover {
+    background-color: #cc0099;
+    transform: scale(1.1);
+}
